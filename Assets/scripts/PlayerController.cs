@@ -3,8 +3,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 10.0f;
+    public float speed = 20.0f;
     public float xRange = 10;
+    public bool gameOver = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,4 +28,14 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Traffic"))
+        {
+            Debug.Log("Game Over!");
+            gameOver = true;
+        }
+    }
 }
+
