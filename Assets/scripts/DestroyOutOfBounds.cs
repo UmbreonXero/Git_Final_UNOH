@@ -17,5 +17,9 @@ public class MoveTrafficLeft : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (transform.position.y < bottomBound)
+        {
+            Destroy(gameObject);
+        }
     }
 }

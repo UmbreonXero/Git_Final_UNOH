@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 20.0f;
     public float xRange = 10;
     public bool gameOver = false;
+    public bool hitCar;
+    private float health = 100.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,8 +35,21 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Traffic"))
         {
-            Debug.Log("Game Over!");
-            gameOver = true;
+            health -= 2.0f;
+            Debug.Log("Player Health: " + health);
+            if (health <= 0)
+            {
+                Debug.Log("Game Over!");
+                gameOver = true;
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Traffic"))
+        {
+            hitCar = true;
         }
     }
 }

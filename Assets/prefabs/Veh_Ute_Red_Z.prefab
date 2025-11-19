@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 3437762866843723559}
   - component: {fileID: 1151027122832651726}
   - component: {fileID: -8400700922078231834}
-  - component: {fileID: -2022131091999455752}
+  - component: {fileID: 8671835449086837362}
   m_Layer: 0
   m_Name: Veh_Ute_Red_Z
   m_TagString: Traffic
@@ -225,13 +225,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3.159401, y: 2.2641532, z: 5.3768578}
   m_Center: {x: 0, y: 1.4147826, z: 0}
---- !u!54 &-2022131091999455752
+--- !u!54 &8671835449086837362
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,7 +239,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985363025850925623}
   serializedVersion: 5
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

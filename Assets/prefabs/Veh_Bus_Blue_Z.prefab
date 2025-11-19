@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 440620838487966352}
   - component: {fileID: 5200813064381740032}
   - component: {fileID: 5958957609412365416}
-  - component: {fileID: -2020483266389904167}
+  - component: {fileID: 6518862260418079097}
   m_Layer: 0
   m_Name: Veh_Bus_Blue_Z
   m_TagString: Traffic
@@ -449,13 +449,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3.4435291, y: 2.9917169, z: 9.444244}
   m_Center: {x: 0, y: 1.8904271, z: 0}
---- !u!54 &-2020483266389904167
+--- !u!54 &6518862260418079097
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -463,7 +463,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7057584323945391817}
   serializedVersion: 5
-  m_Mass: 5
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

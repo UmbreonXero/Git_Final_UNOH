@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnTraffic()
     {
         int trafficIndex = Random.Range(0, trafficPrefab.Length);
-        Vector3 spawnpos = new Vector3(Random.Range(-10, 10), 0, 150);
+        Vector3 spawnpos = new Vector3(Random.Range(-10, 10), 0, 110);
         Instantiate(trafficPrefab[trafficIndex], spawnpos, trafficPrefab[trafficIndex].transform.rotation);
     }
 }
