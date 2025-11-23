@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Game Created by Nethaniel Hernandez for UNOH Final Project 2025 IT-113 :) Thanks For Checking out my Code!
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
@@ -18,16 +18,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
-        //Keep player in bounds
-        if (transform.position.x < -xRange)
+        if (gameOver == false) //Use the Left and Right arrow keys to move the player car left and right!!
         {
-            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
-        }
-        if (transform.position.x > xRange)
-        {
-            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+            horizontalInput = Input.GetAxis("Horizontal");
+            transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
+            //Keep player in bounds
+            if (transform.position.x < -xRange)
+            {
+                transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+            }
+            //Whao an Easter Egg - Quit Looking at this Line :)
+            if (transform.position.x > xRange)
+            {
+                transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+            }
         }
     }
 
@@ -54,3 +58,4 @@ public class PlayerController : MonoBehaviour
     }
 }
 
+//Game Created by Nethaniel Hernandez for UNOH Final Project 2025 IT-113 :) Thanks For Checking out my Code!
